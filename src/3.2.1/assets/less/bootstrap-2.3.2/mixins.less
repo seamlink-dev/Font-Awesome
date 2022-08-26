@@ -535,7 +535,7 @@
 // Vertically center elements in the navbar.
 // Example: an element has a height of 30px, so write out `.navbarVerticalAlign(30px);` to calculate the appropriate top margin.
 .navbarVerticalAlign(@elementHeight) {
-  margin-top: (@navbarHeight - @elementHeight) / 2;
+  margin-top: calc(@navbarHeight - @elementHeight) / 2;
 }
 
 
@@ -553,7 +553,7 @@
 // Table columns
 .tableColumns(@columnSpan: 1) {
   float: none; // undo default grid column styles
-  width: ((@gridColumnWidth) * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
+  width: calc((@gridColumnWidth) * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
   margin-left: 0; // undo default grid column styles
 }
 
@@ -566,7 +566,7 @@
 .makeColumn(@columns: 1, @offset: 0) {
   float: left;
   margin-left: (@gridColumnWidth * @offset) + (@gridGutterWidth * (@offset - 1)) + (@gridGutterWidth * 2);
-  width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+  width: calc(@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
 }
 
 // The Grid
@@ -591,7 +591,7 @@
     }
 
     .span (@columns) {
-      width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+      width: calc(@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
     }
 
     .row {
