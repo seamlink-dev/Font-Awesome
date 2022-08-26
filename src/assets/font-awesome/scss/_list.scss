@@ -17,6 +17,6 @@
   top: calc(2em / 14);
   text-align: center;
   &.#{$fa-css-prefix}-lg {
-    left: -$fa-li-width + calc(4em / 14);
+    left: -$fa-li-width + math.div(4em,14);
   }
 }
